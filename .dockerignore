@@ -1,0 +1,4 @@
+.venv
+.pytube-venv
+.git
+.gitignore
