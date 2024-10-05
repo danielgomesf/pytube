@@ -1,6 +1,7 @@
 from django.views.generic import View
+from django.shortcuts import render
 from pytube import YouTube
-from django.shortcuts import render, redirect
+
 
 # Create your views here.
 class home(View):
@@ -8,8 +9,8 @@ class home(View):
         self.url = url
 
     def get(self, request):
-            return render(request, 'app/home.html')
-        
+        return render(request, 'app/home.html')
+       
     def post(self, request):
         if request.POST.get('fetch-vid'):
             self.url = request.POST.get('given_url')
